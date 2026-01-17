@@ -1,0 +1,110 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* THEME VARIABLES */
+/* :root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --card-bg: #f9fafb;
+  --primary: #2563eb;
+  --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --bg-color: #020617;
+  --text-color: #e5e7eb;
+  --card-bg: #020617;
+  --primary: #38bdf8;
+  --border-color: #1e293b;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+} */
+:root {
+  /* Soft, clean light theme with a tech-focused indigo primary */
+  --bg-color: #f8fafc;        /* Slate 50 - softer than pure white */
+  --text-color: #0f172a;      /* Slate 900 */
+  --text-muted: #64748b;      /* Slate 500 */
+  --card-bg: #ffffff;
+  --primary: #4f46e5;         /* Indigo 600 - "Pro" feel */
+  --primary-hover: #4338ca;
+  --border-color: #e2e8f0;    /* Slate 200 */
+  --accent: #f1f5f9;          /* Used for hover states on categories */
+}
+
+[data-theme="dark"] {
+  /* Deep "Modern IDE" dark theme */
+  --bg-color: #0f172a;        /* Slate 900 */
+  --text-color: #f1f5f9;      /* Slate 100 */
+  --text-muted: #94a3b8;      /* Slate 400 */
+  --card-bg: #1e293b;         /* Slate 800 */
+  --primary: #38bdf8;         /* Sky 400 - high visibility on dark */
+  --primary-hover: #0ea5e9;
+  --border-color: #334155;    /* Slate 700 */
+  --accent: #1e293b;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Inter is the gold standard for dev tools */
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* NAVBAR */
+.navbar {
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-color);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links a,
+.nav-links button {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* HERO */
+.hero {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+  text-align: center;
+}

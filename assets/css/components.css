@@ -1,0 +1,150 @@
+/* TOOLS GRID */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
+  gap: 2rem;
+}
+
+/* CARD */
+.tool-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tool-card p {
+  color: var(--text-muted); /* Using the muted variable for descriptions */
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* BUTTONS */
+.btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+/* FAVORITE BUTTON */
+.fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #7e7e81; /* Default gray star */
+  transition: all 0.2s ease;
+}
+
+.fav-btn:hover {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.fav-btn.active {
+  color: gold;
+}
+
+/* SEARCH BAR */
+.tool-search {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.tool-search input {
+  width: 100%;
+  max-width: 450px;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.tool-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); /* Indigo glow */
+  max-width: 500px;
+}
+
+/* FILTER PILLS */
+.tool-filters {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.tool-filters button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 99px; /* Pill shape */
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tool-filters button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tool-filters button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* TAGS */
+.tags {
+  margin: 0.5rem 0;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  color: var(--primary);
+  opacity: 0.8;
+  font-family: monospace; /* Dev look */
+}

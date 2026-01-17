@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://GarvitRastogi978.github.io/tools-website/sitemap.xml

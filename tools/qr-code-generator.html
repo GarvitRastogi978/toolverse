@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>QR Code Generator | ToolVerse</title>
+  <meta name="description" content="Generate QR codes instantly for text, URLs, or data. Free and fast QR code generator." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>QR Code Generator</h1>
+    <p class="tool-desc">Generate QR codes for text, URLs, or any data instantly.</p>
+
+    <div class="tool-box">
+      <input
+        type="text"
+        id="qrInput"
+        placeholder="Enter text or URL"
+      />
+
+      <button class="btn" id="generateQR">Generate QR</button>
+
+      <div id="qrResult" class="qr-result"></div>
+
+      <a id="downloadQR" class="btn" download="qr-code.png" style="display:none;">
+        Download QR
+      </a>
+    </div>
+
+    <button class="fav-btn" data-tool="qr-code-generator">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 ToolVerse</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/qr-code-generator.js"></script>
+
+</body>
+</html>

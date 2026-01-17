@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>URL Shortener | Free Link Shortener Tool</title>
+  <meta name="description" content="Shorten long URLs instantly using our free online URL shortener tool." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>URL / Link Shortener</h1>
+    <p class="tool-desc">Convert long URLs into short, shareable links.</p>
+
+    <div class="tool-box">
+      <input
+        type="url"
+        id="longUrl"
+        placeholder="Enter long URL here..."
+        required
+      />
+
+      <p class="trust-note">Links are shortened using TinyURL. No data is stored.</p>
+      
+      <button class="btn" id="shortenBtn">Shorten URL</button>
+
+      <input
+        type="text"
+        id="shortUrl"
+        readonly
+        placeholder="Short URL will appear here"
+      />
+
+      <div class="copy-actions">
+        <button class="btn" id="copyBtn">Copy</button>
+        <button class="btn" id="openBtn">Open</button>
+      </div>
+
+      <span id="status"></span>
+    </div>
+
+    <button class="fav-btn" data-tool="url-shortener">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 ToolVerse</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/url-shortener.js"></script>
+
+</body>
+</html>

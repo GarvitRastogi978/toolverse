@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>JSON Formatter & Validator | ToolVerse</title>
+  <meta name="description" content="Validate, format, and minify JSON instantly. Free online JSON formatter tool for developers." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>JSON Formatter & Validator</h1>
+    <p class="tool-desc">Validate, beautify, and minify JSON data instantly.</p>
+
+    <div class="tool-box grid-2">
+      <textarea id="jsonInput" rows="14" placeholder="Paste JSON here..."></textarea>
+      <textarea id="jsonOutput" rows="14" readonly placeholder="Formatted JSON will appear here..."></textarea>
+    </div>
+
+    <div class="tool-actions">
+      <button class="btn" id="formatBtn">Format</button>
+      <button class="btn" id="minifyBtn">Minify</button>
+      <button class="btn" id="copyBtn">Copy</button>
+      <span id="status"></span>
+    </div>
+
+    <button class="fav-btn" data-tool="json-formatter">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 ToolVerse</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/json-formatter.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta property="og:title" content="Multi-Unit Converter | ToolVerse" />
+  <meta property="og:description" content="Free online converter for length, weight, and temperature." />
+  <meta property="og:type" content="website" />
+  
+  <title>Advanced Unit Converter | ToolVerse</title>
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+  
+  <style>
+    .tool-box { display: flex; flex-direction: column; gap: 0.8rem; max-width: 450px; margin: 20px 0; background: #f9f9f9; padding: 20px; border-radius: 12px; border: 1px solid #eee; }
+    .result { font-weight: bold; font-size: 1.4rem; margin-top: 15px; color: #2c3e50; padding: 10px; background: #eef2f7; border-radius: 8px; text-align: center; }
+    select, input { padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 1rem; }
+    label { font-weight: 600; margin-bottom: -5px; font-size: 0.9rem; color: #555; }
+    .category-select { background-color: #007bff; color: white; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>All-in-One Unit Converter</h1>
+    <p class="tool-desc">Fast and accurate conversions for Length, Weight, and Temperature.</p>
+
+    <div class="tool-box">
+      <label>Conversion Category</label>
+      <select id="category" class="category-select">
+        <option value="length">Length (m, km, ft, etc.)</option>
+        <option value="weight">Weight (kg, lb, oz, etc.)</option>
+        <option value="temp">Temperature (°C, °F, K)</option>
+      </select>
+
+      <hr style="width:100%; border:0; border-top:1px solid #ddd; margin: 10px 0;">
+
+      <label>Value to Convert</label>
+      <input type="number" id="inputValue" placeholder="Enter number..." step="any" />
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div>
+          <label>From</label>
+          <select id="fromUnit" style="width: 100%;"></select>
+        </div>
+        <div>
+          <label>To</label>
+          <select id="toUnit" style="width: 100%;"></select>
+        </div>
+      </div>
+
+      <div class="result" id="result">Result: —</div>
+    </div>
+
+    <button class="fav-btn" data-tool="unit-converter">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container"><p>© 2026 ToolVerse</p></div>
+</footer>
+
+<script>
+  const category = document.getElementById('category');
+  const input = document.getElementById('inputValue');
+  const fromUnit = document.getElementById('fromUnit');
+  const toUnit = document.getElementById('toUnit');
+  const resultDisplay = document.getElementById('result');
+
+  // Unit Definitions
+  const units = {
+    length: {
+      m: { name: "Meters (m)", rate: 1 },
+      km: { name: "Kilometers (km)", rate: 1000 },
+      mi: { name: "Miles (mi)", rate: 1609.34 },
+      ft: { name: "Feet (ft)", rate: 0.3048 },
+      in: { name: "Inches (in)", rate: 0.0254 },
+      cm: { name: "Centimeters (cm)", rate: 0.01 },
+      yd: { name: "Yards (yd)", rate: 0.9144 },
+      mm: { name: "Millimeters (mm)", rate: 0.001 }
+    },
+    weight: {
+      kg: { name: "Kilograms (kg)", rate: 1 },
+      g: { name: "Grams (g)", rate: 0.001 },
+      lb: { name: "Pounds (lb)", rate: 0.453592 },
+      oz: { name: "Ounces (oz)", rate: 0.0283495 },
+      mg: { name: "Milligrams (mg)", rate: 0.000001 }
+    },
+    temp: {
+      c: { name: "Celsius (°C)" },
+      f: { name: "Fahrenheit (°F)" },
+      k: { name: "Kelvin (K)" }
+    }
+  };
+
+  // Populate dropdowns based on category
+  function updateDropdowns() {
+    const cat = category.value;
+    const options = Object.keys(units[cat]).map(key => 
+      `<option value="${key}">${units[cat][key].name}</option>`
+    ).join('');
+    
+    fromUnit.innerHTML = options;
+    toUnit.innerHTML = options;
+    
+    // Set a default "To" unit that is different from "From"
+    if(toUnit.options.length > 1) toUnit.selectedIndex = 1;
+    convert();
+  }
+
+  function convert() {
+    const val = parseFloat(input.value);
+    if (isNaN(val)) { resultDisplay.innerText = "Result: —"; return; }
+
+    const cat = category.value;
+    const from = fromUnit.value;
+    const to = toUnit.value;
+    let res;
+
+    if (cat === 'temp') {
+      // Temperature Logic
+      let celsius;
+      if (from === 'c') celsius = val;
+      else if (from === 'f') celsius = (val - 32) * 5/9;
+      else if (from === 'k') celsius = val - 273.15;
+
+      if (to === 'c') res = celsius;
+      else if (to === 'f') res = (celsius * 9/5) + 32;
+      else if (to === 'k') res = celsius + 273.15;
+    } else {
+      // Length & Weight Logic (Base Unit Method)
+      const baseValue = val * units[cat][from].rate;
+      res = baseValue / units[cat][to].rate;
+    }
+
+    resultDisplay.innerText = `Result: ${res.toLocaleString(undefined, {maximumFractionDigits: 4})} ${to.toUpperCase()}`;
+  }
+
+  // Listeners
+  category.addEventListener('change', updateDropdowns);
+  [input, fromUnit, toUnit].forEach(el => el.addEventListener('input', convert));
+
+  // Initialize
+  updateDropdowns();
+</script>
+</body>
+</html>

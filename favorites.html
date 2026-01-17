@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Advanced SEO Setup (Static Website Best Practices)-->
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="Free Online Developer Tools" />
+  <meta property="og:description" content="Fast, secure, free developer tools like unit converter, password generator and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/tools-website/" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <title>Favorite Tools | ToolVerse</title>
+  <meta name="description" content="Your saved favorite developer tools in one place." />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="index.html">Tools</a>
+      <a href="favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Your Favorite Tools</h1>
+  <section id="favoritesGrid" class="tools-grid"></section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 ToolVerse</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script>
+  const toolsMap = {
+    "unit-converter": {
+      name: "Unit Converter",
+      desc: "Convert length, weight & temperature",
+      link: "tools/unit-converter.html"
+    },
+    "password-generator": {
+      name: "Password Generator",
+      desc: "Generate strong passwords",
+      link: "tools/password-generator.html"
+    },
+    "markdown-previewer": {
+      name: "Markdown Previewer",
+      desc: "Preview markdown live",
+      link: "tools/markdown-previewer.html"
+    },
+    "qr-code-generator": {
+      name: "QR Code Generator",
+      desc: "Generate QR codes for text or URLs",
+      link: "tools/qr-code-generator.html"
+    },
+    "lorem-ipsum-generator": {
+      name: "Lorem Ipsum Generator",
+      desc: "Generate dummy placeholder text",
+      link: "tools/lorem-ipsum-generator.html"
+    },
+    "json-formatter": {
+      name: "JSON Formatter",
+      desc: "Validate and beautify JSON data",
+      link: "tools/json-formatter.html"
+    },
+    "color-converter": {
+      name: "Color Converter",
+      desc: "Convert HEX, RGB, and HSL colors",
+      link: "tools/color-converter.html"
+    },
+    "url-shortener": {
+      name: "URL Shortener",
+      desc: "Shorten long URLs instantly",
+      link: "tools/url-shortener.html"
+    }
+  };
+
+  const grid = document.getElementById("favoritesGrid");
+  const favorites = getFavorites();
+
+  if (favorites.length === 0) {
+    grid.innerHTML = "<p>No favorite tools yet ⭐</p>";
+  } else {
+    favorites.forEach(id => {
+      const tool = toolsMap[id];
+      if (!tool) return;
+
+      grid.innerHTML += `
+        <article class="tool-card" data-tool="${id}">
+          <h3>${tool.name}</h3>
+          <p>${tool.desc}</p>
+          <div class="card-actions">
+            <a href="${tool.link}" class="btn">Open</a>
+            <button class="fav-btn">⭐</button>
+          </div>
+        </article>
+      `;
+    });
+  }
+</script>
+
+</body>
+</html>

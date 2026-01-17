@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Markdown Previewer | ToolVerse</title>
+  <meta name="description" content="Live markdown previewer to convert markdown into formatted HTML instantly." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper markdown-tool">
+    <h1>Markdown Previewer</h1>
+    <p class="tool-desc">Write Markdown on the left and see live HTML preview on the right.</p>
+
+    <div class="markdown-grid">
+      <textarea id="markdownInput" placeholder="# Write Markdown here..."></textarea>
+      <div id="markdownPreview" class="preview-box"></div>
+    </div>
+
+    <button class="fav-btn" data-tool="markdown-previewer">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 ToolVerse</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/markdown-previewer.js"></script>
+
+</body>
+</html>

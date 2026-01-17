@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Advanced SEO Setup (Static Website Best Practices)-->
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="Free Online Developer Tools" />
+  <meta property="og:description" content="Fast, secure, free developer tools like unit converter, password generator and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/tools-website/" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- SEO -->
+  <title>ToolVerse – Free Online Developer Tools</title>
+  <meta name="description" content="Free online tools for developers: unit converter, password generator, markdown previewer, and more. Fast, secure, and client-side." />
+  <meta name="keywords" content="developer tools, online tools, unit converter, password generator, markdown previewer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">ToolVerse</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Tools</a>
+        <a href="favorites.html">Favorites ⭐</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>ToolVerse – All Your Developer Tools in One Universe</h1>
+      <h4>“One Universe. Infinite Tools.”</h4>
+      <p>Fast, secure, and free tools for developers. No sign-up required.</p>
+    </div>
+  </section>
+
+  <!-- TOOLS GRID -->
+  <main class="container">
+
+    <!-- CATEGORY FILTER -->
+    <div class="tool-filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="converter">Converters</button>
+      <button data-filter="security">Security</button>
+      <button data-filter="text">Text</button>
+      <button data-filter="utility">Utilities</button>
+      <button data-filter="developer">Developer</button>
+      <button data-filter="design">Design</button>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="tool-search">
+      <input
+        type="text"
+        id="toolSearch"
+        placeholder="Search tools..."
+        aria-label="Search tools"
+      />
+    </div>
+    <section class="tools-grid">
+
+      <!-- Tool Card 1 -->
+      <!-- <article class="tool-card" data-tool="unit-converter">
+        <h3>Unit Converter</h3>
+        <p>Convert length, weight, and temperature instantly.</p>
+        <div class="card-actions">
+          <a href="tools/unit-converter.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article> -->
+      <article
+      class="tool-card"
+      data-tool="unit-converter"
+      data-category="converter"
+      data-tags="length,metric,fast"
+    >
+      <h3>Unit Converter</h3>
+      <p>Convert length, weight, and temperature.</p>
+      <div class="tags">
+        <span>#converter</span>
+        <span>#fast</span>
+      </div>
+      <div class="card-actions">
+        <a href="tools/unit-converter.html" class="btn">Open</a>
+        <button class="fav-btn">⭐</button>
+      </div>
+    </article>
+
+      <!-- Tool Card 2 -->
+      <!-- <article class="tool-card" data-tool="password-generator">
+        <h3>Password Generator</h3>
+        <p>Create secure and customizable passwords.</p>
+        <div class="card-actions">
+          <a href="tools/password-generator.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article> -->
+      <article 
+        class="tool-card" 
+        data-tool="password-generator" 
+        data-category="security" 
+        data-tags="password,secure,random"
+>
+        <h3>Password Generator</h3>
+        <p>Create strong, secure passwords to keep your accounts safe.</p>
+        <div class="tags">
+          <span>#security</span>
+          <span>#secure</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/password-generator.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+      <!-- Tool Card 3 -->
+      <!-- <article class="tool-card" data-tool="markdown-previewer">
+        <h3>Markdown Previewer</h3>
+        <p>Write markdown and preview it live.</p>
+        <div class="card-actions">
+          <a href="tools/markdown-previewer.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article> -->
+      <article 
+        class="tool-card" 
+        data-tool="markdown-previewer" 
+        data-category="text" 
+        data-tags="markdown,preview,editor"
+>
+        <h3>Markdown Previewer</h3>
+        <p>Write Markdown code and see the rendered results in real-time.</p>
+        <div class="tags">
+          <span>#text</span>
+          <span>#editor</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/markdown-previewer.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+      <!-- Tool Card 4 -->
+      <article
+        class="tool-card"
+        data-tool="qr-code-generator"
+        data-category="utility"
+        data-tags="qr,code,share,link"
+>
+        <h3>QR Code Generator</h3>
+        <p>Generate QR codes for URLs and text instantly.</p>
+        <div class="tags">
+          <span>#utility</span>
+          <span>#share</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/qr-code-generator.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+      <!--Tool Card 5-->
+      <article
+        class="tool-card"
+        data-tool="lorem-ipsum-generator"
+        data-category="text"
+        data-tags="lorem,ipsum,dummy,text"
+>
+        <h3>Lorem Ipsum Generator</h3>
+        <p>Generate dummy text for design and development.</p>
+        <div class="tags">
+          <span>#text</span>
+          <span>#dummy</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/lorem-ipsum-generator.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+      <!-- Tool Card 6 -->
+      <article
+        class="tool-card"
+        data-tool="json-formatter"
+        data-category="developer"
+        data-tags="json,formatter,validator,api"
+>
+        <h3>JSON Formatter</h3>
+        <p>Validate, format, and minify JSON data.</p>
+        <div class="tags">
+          <span>#json</span>
+          <span>#api</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/json-formatter.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+      <!--Tool Card 7-->
+      <article
+        class="tool-card"
+        data-tool="color-converter"
+        data-category="design"
+        data-tags="color,hex,rgb,hsl,converter"
+>
+        <h3>Color Converter</h3>
+        <p>Convert colors between HEX, RGB, and HSL.</p>
+        <div class="tags">
+          <span>#color</span>
+          <span>#design</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/color-converter.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+      <!-- Tool Card 8 -->
+      <article
+        class="tool-card"
+        data-tool="url-shortener"
+        data-category="utility"
+        data-tags="url,link,shortener,seo"
+>
+        <h3>URL Shortener</h3>
+        <p>Shorten long URLs into shareable links.</p>
+        <div class="tags">
+          <span>#url</span>
+          <span>#seo</span>
+        </div>
+        <div class="card-actions">
+          <a href="tools/url-shortener.html" class="btn">Open</a>
+          <button class="fav-btn">⭐</button>
+        </div>
+      </article>
+
+
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 ToolVerse. Built with HTML, CSS & JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/favorites.js"></script>
+
+</body>
+</html>
