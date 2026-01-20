@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Markdown Editor | Live Preview & PDF Export</title>
+  <meta name="description" content="Write Markdown with live preview. Export as PDF or download .md file." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- PDF Export -->
+  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container wide">
+  <section class="tool-wrapper">
+    <h1>Markdown Editor</h1>
+    <p class="tool-desc">
+      Write Markdown with live preview. Export to PDF or download .md file.
+    </p>
+
+    <div class="editor-actions">
+      <button class="btn" id="downloadMd">Download .md</button>
+      <button class="btn" id="exportPdf">Export PDF</button>
+    </div>
+
+    <!-- SPLIT VIEW -->
+    <div class="split-editor">
+      <textarea
+        id="markdownInput"
+        placeholder="# Start writing Markdown here..."
+      ></textarea>
+
+      <div id="markdownPreview" class="preview"></div>
+    </div>
+
+    <button class="fav-btn" data-tool="markdown-editor">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/markdown-editor.js"></script>
+
+</body>
+</html>
