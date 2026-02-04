@@ -202,3 +202,52 @@
     height: auto;
   }
 }
+
+/* IMAGE TOOL STYLING */
+.image-preview {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+}
+
+/* PDF TOOL STYLING */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #e2e8f0;
+  color: #161616;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.how-to-use {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #8cb5ee;
+  border-radius: 8px;
+  color: #161616;
+  text-align: center;
+}

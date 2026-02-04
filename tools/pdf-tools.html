@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>PDF Tools | Merge & Split PDF Online</title>
+  <meta name="description" content="Merge multiple PDFs or split PDF pages instantly. Free online PDF tools." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <!-- PDF LIB -->
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>PDF Tools</h1>
+    <p class="tool-desc">Merge or split PDF files securely in your browser.</p>
+    <hr>
+    <blockquote>🔒 All PDF processing happens in your browser. Files are never uploaded.</blockquote>
+    <hr>
+
+    <div class="how-to-use">
+      <h2><u>How To Use</u></h2>
+        <p><strong>1. Merge PDF:</strong> Select multiple PDF files and click "Merge PDFs" to combine them into one file.</p>
+        <p><strong>2. Split PDF:</strong> Select a PDF file, specify the pages you want to extract (e.g., 1,3,5-7), and click "Split PDF".</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="merge">Merge PDF</button>
+      <button class="tab" data-tab="split">Split PDF</button>
+    </div>
+
+    <!-- MERGE -->
+    <div class="tab-content active" id="merge">
+      <input type="file" id="mergeInput" multiple accept="application/pdf" />
+      <button class="btn" id="mergeBtn">Merge PDFs</button>
+    </div>
+
+    <!-- SPLIT -->
+    <div class="tab-content" id="split">
+      <input type="file" id="splitInput" accept="application/pdf" />
+      <label>
+        Pages (example: 1,3,5-7)
+        <input type="text" id="pages" placeholder="1,2,4-6" />
+      </label>
+      <button class="btn" id="splitBtn">Split PDF</button>
+    </div>
+
+    <span id="status"></span>
+
+    <button class="fav-btn" data-tool="pdf-tools">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/pdf-tools.js"></script>
+
+</body>
+</html>
