@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Free Online Screen Recorder | Record Screen & Audio</title>
+  <meta name="description" content="Free online screen recorder to record your screen and audio. No download required. Record presentations and tutorials easily." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>Free Online Screen Recorder</h1>
+    <p class="tool-desc">
+      Record your screen and audio directly in your browser. No installation required.
+      Perfect for tutorials, demos, and presentations.
+    </p>
+
+    <div class="recorder-controls">
+      <button class="btn" id="startBtn">Start Recording</button>
+      <button class="btn danger" id="stopBtn" disabled>Stop Recording</button>
+    </div>
+
+    <video id="preview" controls class="recording-preview"></video>
+
+    <a id="downloadLink" class="btn hidden" download="screen-recording.webm">
+      Download Recording
+    </a>
+
+    <button class="fav-btn" data-tool="screen-recorder">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!--INFO-->
+<h2>What Free Online Screen Recorder do?</h2>
+<p>
+  Free Online Screen Recorder is a web-based tool that allows you to capture your screen activity along with audio input. It is ideal for creating tutorials, recording presentations, or capturing gameplay without the need for any software installation.
+</p>
+<br>
+<h2>How to use Free Online Screen Recorder?</h2>
+<ol>
+    <li>1. Click the "Start Recording" button to begin capturing your screen.</li>
+    <li>2. Select the screen or application window you want to record.</li>
+    <li>3. To stop recording, click the "Stop Recording" button.</li>
+    <li>4. Preview your recording in the video player provided.</li>
+    <li>5. Click the "Download Recording" button to save the video file to your device.</li>
+</ol>
+<br>
+<h2>Features of Free Online Screen Recorder</h2>
+<ul>
+    <li>✅ No installation required - works directly in your browser.</li>
+    <li>✅ Record both screen and audio simultaneously.</li>
+    <li>✅ Simple and user-friendly interface.</li>
+    <li>✅ Supports downloading recordings in WebM format.</li>
+    <li>✅ Completely free to use.</li>
+</ul>
+
+<hr>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/screen-recorder.js"></script>
+
+</body>
+</html>

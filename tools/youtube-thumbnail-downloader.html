@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>YouTube Thumbnail Downloader | Download All Thumbnail Sizes</title>
+  <meta name="description" content="Download YouTube video thumbnails in HD, SD, MQ, HQ quality instantly. Free and fast thumbnail downloader tool." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>YouTube Thumbnail Downloader</h1>
+    <p class="tool-desc">
+      Paste a YouTube video URL and download thumbnails in all available sizes.
+    </p>
+
+    <input
+      type="text"
+      id="ytUrl"
+      placeholder="Paste YouTube video URL here..."
+    />
+
+    <button class="btn" id="fetchBtn">Get Thumbnails</button>
+
+    <div id="thumbnailContainer" class="thumbnail-grid"></div>
+
+    <button class="fav-btn" data-tool="youtube-thumbnail">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section">
+        <h2>What are YouTube Thumbnails?</h2>
+        <p>
+            YouTube thumbnails are preview images that show on a video in YouTube. 
+            They are displayed on the YouTube website and App also and in search results. 
+            Thumbnails are used to give a preview of the video content and attract 
+            people to click on the video.
+        </p>
+    </section>
+
+    <section class="how-to-section">
+        <h2>How to Download YouTube Thumbnails with this YouTube Thumbnail Downloader tool?</h2>
+        <ol class="steps-list">
+            <li>
+                <strong>Step 1:</strong> Enter the YouTube video URL in the given input field. 
+                Once you enter the URL, the tool will automatically fetch all sizes of thumbnails.
+            </li>
+            <li>
+                <strong>Step 2:</strong> You can download the thumbnails in different sizes 
+                by clicking on the "Download" button below the thumbnail. Then right-click 
+                on the image and select "Save image as" to download the thumbnail.
+            </li>
+        </ol>
+    </section>
+
+    <hr>
+    
+    <section class="faq-section">
+        <h2>FAQs</h2>
+        
+        <div class="faq-item">
+            <h3>How to find the YouTube video URL?</h3>
+            <p>
+                To find the YouTube video URL, go to the YouTube website and open the video 
+                you want to download the thumbnail for. Copy the URL from the address bar 
+                of your browser. Or click on the "Share" button to get the URL. In the app, 
+                click on "Share" and then Copy the link.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I download all sizes of YouTube thumbnails?</h3>
+            <p>
+                Yes, this tool will fetch all sizes of thumbnails and you can download them easily.
+            </p>
+        </div>
+    </section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/youtube-thumbnail-downloader.js"></script>
+
+</body>
+</html>

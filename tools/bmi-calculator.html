@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>BMI Calculator | Body Mass Index Calculator</title>
+  <meta name="description" content="Free BMI Calculator to calculate Body Mass Index using height and weight. Know your BMI category instantly." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>BMI Calculator</h1>
+    <p class="tool-desc">
+      Calculate your Body Mass Index (BMI) using your height and weight and know your health category instantly.
+    </p>
+
+<hr>
+    
+    <div>
+      <img src="/assets/images/BMI-Chart.jpg" alt="BMI Chart" class="bmi-chart" />
+    </div>
+
+<hr>
+
+    <div class="form-group">
+      <label for="height">Height (cm)</label>
+      <input type="number" id="height" placeholder="e.g. 170" />
+    </div>
+
+    <div class="form-group">
+      <label for="weight">Weight (kg)</label>
+      <input type="number" id="weight" placeholder="e.g. 65" />
+    </div>
+
+    <button class="btn" id="calculateBtn">Calculate BMI</button>
+
+    <div id="result" class="bmi-result hidden">
+      <h2>Your BMI: <span id="bmiValue"></span></h2>
+      <p class="bmi-category" id="bmiCategory"></p>
+    </div>
+
+    <button class="fav-btn" data-tool="bmi-calculator">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!--INFO-->
+  <h2>What is BMI?</h2>
+  <p>Body Mass Index (BMI) is a simple calculation using a person's height and weight. It is widely used as a screening tool to categorize individuals into different weight categories that may indicate potential health risks.</p>
+  <br>
+  <h2>BMI Categories:</h2>
+  <ul>
+    <li><strong>Underweight:</strong> BMI less than 18.5</li>
+    <li><strong>Normal weight:</strong> BMI 18.5 to 24.9</li>
+    <li><strong>Overweight:</strong> BMI 25 to 29.9</li>
+    <li><strong>Obesity:</strong> BMI 30 or greater</li>
+  </ul>
+  <br>
+  <h2>How to Use This Calculator:</h2>
+  <p>1. Enter your <strong>height</strong> in centimeters (cm).</p>
+  <p>2. Enter your <strong>weight</strong> in kilograms (kg).</p>
+  <p>3. Click the <strong>"Calculate BMI"</strong> button to see your BMI value and category.</p>
+  <br>
+  <h2>Note:</h2>
+  <p>BMI is a general indicator and does not account for muscle mass, bone density, overall body composition, and racial and sex differences. For a comprehensive health assessment, consult with a healthcare professional.</p>
+
+<hr>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/bmi-calculator.js"></script>
+
+</body>
+</html>

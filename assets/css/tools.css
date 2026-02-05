@@ -73,6 +73,7 @@
   text-align: center;
 }
 
+/* ----------------------------------------------------------------------------- */
 
 /* color palette */
 /* Color Picker Styling */
@@ -114,6 +115,8 @@
     flex: 1;
     min-width: 120px;
 }
+
+/* ----------------------------------------------------------------------------- */
 
 /* Palette Grid Styling */
 .palette {
@@ -158,6 +161,8 @@
   text-align: left;
   font-style: italic;
 }
+
+/* ----------------------------------------------------------------------------- */
 
 /* TOOL MARKDOWN EDITOR STYLING */
 .container.wide {
@@ -215,6 +220,8 @@
   border-radius: 12px;
 }
 
+/* ----------------------------------------------------------------------------- */
+
 /* PDF TOOL STYLING */
 .tabs {
   display: flex;
@@ -250,4 +257,256 @@
   border-radius: 8px;
   color: #161616;
   text-align: center;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* COLOR EXTRACTOR TOOL STYLING */
+.container.wide {
+  max-width: 1400px;
+}
+
+#imageCanvas {
+  max-width: 100%;
+  cursor: crosshair;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  margin: 1.5rem 0;
+}
+
+.palette-color {
+  height: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+/* ADD THESE */
+  border: 1px solid #ccc;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+.palette-color:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
+
+.color-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.color-table th,
+.color-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* YOUTUBE THUMBNAIL DOWNLOADER STYLING */
+
+/* Input & Button remains largely the same but ensured centered alignment */
+#ytUrl {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  margin: 0 auto 20px auto;
+  display: block;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+#ytUrl:focus {
+  border-color: #ff0000;
+}
+
+.btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Updated Grid for Vertical Layout */
+.thumbnail-grid {
+  margin: 40px auto;
+  display: grid;
+  /* Forces one card per row and keeps it slim */
+  grid-template-columns: 1fr; 
+  gap: 30px;
+  width: 100%;
+  max-width: 450px; /* Reduced width for a cleaner vertical look */
+}
+
+/* Enhanced Card Styling */
+.thumbnail-card {
+  background: var(--card-bg, #ffffff);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--border, #eee);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.thumbnail-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* Clean Typography */
+.thumbnail-card h4 {
+  margin: 1.2rem 0 0.5rem;
+  font-family: 'Inter', sans-serif; /* High-end look */
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0984aa;
+  letter-spacing: -0.02em;
+}
+
+.thumbnail-card .hint {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+/* Download Button within Card */
+.thumbnail-card .btn {
+  margin-top: 15px;
+  width: 100%; /* Makes the download button prominent */
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* BMI TOOL STYLING */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; /* Optional: keeps the form neat */
+}
+
+.form-group label {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d62b1;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus state for better UX */
+.form-group input:focus {
+  border-color: #1a1b1c;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Placeholder styling */
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.bmi-result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.bmi-category {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+div {
+  text-align: center; /* Centers the image horizontally within the div */
+  margin-top: 20px;   /* Adds some space above the div */
+  margin-bottom: 20px; /* Adds some space below the div */
+}
+
+.bmi-chart {
+  max-width: 50%;    /* Ensures the image is never wider than its container */
+  height: auto;       /* Maintains the image's aspect ratio */
+  border: 1px solid #9e9b9b; /* Adds a light border around the image */
+  border-radius: 8px; /* Rounds the corners of the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  display: block;     /* Changes display from inline to block for easier centering via margin */
+  margin-left: auto;  /* Auto margins for horizontal centering if not using text-align: center on parent */
+  margin-right: auto;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* ONLINE SCREEN RECORDER STYLING */
+.recorder-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn.danger {
+  background: #e63946;
+}
+
+.recording-preview {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 12px;
+  background: #000;
+}
+
+.hidden {
+  display: none;
 }

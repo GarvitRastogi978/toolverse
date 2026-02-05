@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Color Extractor from Image | Palette Generator</title>
+  <meta name="description" content="Extract dominant colors from images, pick colors, generate palettes, and download color palettes." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container wide">
+  <section class="tool-wrapper">
+    <h1>Color Extractor & Palette Generator From Image</h1>
+    <p class="tool-desc">
+      Extract dominant colors from any image, pick colors manually, and download palettes.
+    </p>
+
+    <input type="file" id="imageInput" accept="image/*" />
+
+    <!-- IMAGE CANVAS -->
+    <canvas id="imageCanvas"></canvas>
+
+    <div class="controls">
+      <label>
+        Palette Size:
+        <input type="range" id="colorCount" min="5" max="20" value="10">
+        <span id="countValue">10</span>
+      </label>
+
+      <button class="btn" id="extractBtn">Extract Colors</button>
+      <button class="btn" id="downloadPalette">Download Palette</button>
+    </div>
+
+    <!-- PALETTE -->
+    <div id="palette" class="palette-grid"></div>
+
+    <!-- COLOR TABLE -->
+    <table class="color-table">
+      <thead>
+        <tr>
+          <th>Color</th>
+          <th>HEX</th>
+          <th>RGB</th>
+        </tr>
+      </thead>
+      <tbody id="colorTable"></tbody>
+    </table>
+
+    <button class="fav-btn" data-tool="color-extractor">⭐ Add to Favorites</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/color-extractor.js"></script>
+
+</body>
+</html>
