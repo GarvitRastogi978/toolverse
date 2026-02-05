@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Age Calculator | Calculate Your Exact Age Online</title>
+  <meta name="description" content="Free online Age Calculator to calculate your exact age in years, months, and days using date of birth." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>Age Calculator</h1>
+    <p class="tool-desc">
+      Calculate your exact age in years, months, and days from your date of birth.
+    </p>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" />
+    </div>
+
+    <button class="btn" id="calculateAgeBtn">Calculate Age</button>
+
+    <div id="ageResult" class="age-result hidden">
+      <h2>Your Age</h2>
+      <p>
+        <strong><span id="years"></span></strong> Years
+        <strong><span id="months"></span></strong> Months
+        <strong><span id="days"></span></strong> Days
+      </p>
+    </div>
+
+    <button class="fav-btn" data-tool="age-calculator">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!-- INFO -->
+<section class="info-section container">
+  <h2>How to Use the Age Calculator</h2>
+  <p>
+    Simply enter your date of birth in the input field and click the "Calculate Age" button. The tool will instantly calculate and display your exact age in years, months, and days.
+  </p>
+<br>
+  <h2>Why Use an Age Calculator?</h2>
+  <p>
+    An age calculator is a handy tool for quickly determining your age without having to do the math manually. It's useful for various purposes such as filling out forms, planning events, or just satisfying your curiosity about how old you are in different time units.
+  </p>
+<br>
+    <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/bmi-calculator.html">BMI Calculator</a> - Calculate your Body Mass Index.</li>
+        <li><a href="../tools/calculator.html">Calculator</a> - A full-screen calculator for all your math needs.</li>
+    </ul>
+</section>
+
+<hr>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/age-calculator.js"></script>
+
+</body>
+</html>

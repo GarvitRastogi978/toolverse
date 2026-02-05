@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Online Calculator | Normal & Scientific Calculator</title>
+  <meta name="description" content="Free online normal and scientific calculator. Perform basic and advanced mathematical calculations easily." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper calculator-wrapper">
+    <h1>Normal & Scientific Calculator</h1>
+
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+
+      <button class="mode-toggle btn" id="toggleMode">
+        Scientific Mode
+      </button>
+
+      <!-- SCIENTIFIC -->
+      <div class="buttons scientific hidden" id="scientific">
+        <button data-value="sin(">sin</button>
+        <button data-value="cos(">cos</button>
+        <button data-value="tan(">tan</button>
+        <button data-value="log(">log</button>
+        <button data-value="ln(">ln</button>
+        <button data-value="sqrt(">√</button>
+        <button data-value="pow(">xʸ</button>
+        <button data-value="PI">π</button>
+        <button data-value="E">e</button>
+        <button data-value="(">(</button>
+        <button data-value=")">)</button>
+      </div>
+
+      <!-- NORMAL -->
+      <div class="buttons">
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="/">÷</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="*">×</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-">−</button>
+
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button id="clear">C</button>
+        <button data-value="+">+</button>
+
+        <button class="equals" id="equals">=</button>
+      </div>
+    </div>
+
+    <button class="fav-btn" data-tool="calculator">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!-- INFO -->
+<section class="info-section container">
+  <h2>How to Use this Calculator</h2>
+    <p>
+        This calculator allows you to perform both basic and advanced mathematical calculations. Use the buttons to input numbers and operations. You can switch between normal and scientific modes using the "Scientific Mode" toggle button. In scientific mode, you have access to functions like sine, cosine, tangent, logarithms, square root, and more.
+    </p>
+<br>
+    <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/bmi-calculator.html">BMI Calculator</a> - Calculate your Body Mass Index.</li>
+        <li><a href="../tools/age-calculator.html">Age Calculator</a> - Calculate your exact age in years, months, and days.</li>
+    </ul>
+</section>
+
+<hr>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/calculator.js"></script>
+
+</body>
+</html>

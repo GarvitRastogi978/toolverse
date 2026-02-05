@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Images to PDF Converter | Convert Images to PDF Online</title>
+  <meta name="description" content="Free online Images to PDF converter. Upload images, reorder, remove, and convert them into a single PDF file instantly." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>Images to PDF</h1>
+    <p class="tool-desc">
+      Upload images, reorder or remove them, and convert them into a single PDF file.
+    </p>
+
+    <input
+      type="file"
+      id="imageInput"
+      accept="image/*"
+      multiple
+    />
+
+    <div id="imageList" class="image-list"></div>
+
+    <button class="btn" id="convertBtn">Convert to PDF</button>
+
+    <button class="fav-btn" data-tool="images-to-pdf">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!-- INFO -->
+ <h2>What Image To PDF Convertor do?</h2>
+ <p>Image to PDF converter is a tool that allows you to convert one or more image files (like JPG, PNG, GIF) into a single PDF document. This is useful for creating a PDF from photos, scanned documents, or any images you want to compile into a single file.</p>
+ <br>
+    <h2>How to use Image To PDF Convertor?</h2>
+    <p>To use the Image to PDF converter, follow these steps:</p>
+    <ol>
+      <li>1. Click on the "Choose Files" button to upload your images. You can select multiple images at once.</li>
+      <li>2. After uploading, you can see the list of images. You can reorder them by dragging and dropping or remove any unwanted images.</li>
+      <li>3. Once you're satisfied with the order, click the "Convert to PDF" button.</li>
+      <li>4. The tool will process your images and generate a single PDF file that you can download.</li>
+    </ol>
+    <br>
+    <h2>Supported Image Formats</h2>
+    <p>The Image to PDF converter typically supports a variety of image formats, including:</p>
+    <ul style="list-style-type: disc; margin-left: 20px;">
+      <li>JPEG/JPG</li>
+      <li>PNG</li>
+      <li>GIF</li>
+      <li>BMP</li>
+      <li>TIFF</li>
+      <li>WEBP</li>
+    </ul>
+    <br>
+    <h2>Benefits of Using Image To PDF Convertor</h2>
+    <p>Using an Image to PDF converter offers several benefits:</p>
+    <ul>
+      <li>1. Convenience: Easily compile multiple images into a single PDF document.</li>
+      <li>2. Organization: Keep related images together in one file for better organization.</li>
+      <li>3. Sharing: PDFs are widely accepted and can be easily shared via email or cloud services.</li>
+      <li>4. Compression: Some converters offer options to compress the PDF file size.</li>
+      <li>5. Accessibility: PDFs can be viewed on various devices and platforms without losing formatting.</li>
+    </ul>
+
+<hr>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/images-to-pdf.js"></script>
+
+</body>
+</html>
