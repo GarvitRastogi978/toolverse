@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GitHub Repo Downloader | Download GitHub Repository ZIP</title>
+  <meta name="description" content="Download any public GitHub repository as ZIP instantly. No login required." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1><i class="fa-brands fa-github"></i> GitHub Repository Downloader</h1>
+    <p class="tool-desc">
+      📥Download any public GitHub repository as a ZIP file.
+    </p>
+
+    <div class="card tool-box">
+      <input
+        type="url"
+        id="repoUrl"
+        placeholder="https://github.com/username/repository"
+      />
+
+      <select id="branch">
+        <option value="main">main</option>
+        <option value="master">master</option>
+      </select>
+
+      <button id="downloadBtn" class="btn">
+        ⬇ Download Repository
+      </button>
+
+      <p id="status" class="status"></p>
+    </div>
+
+    <button class="fav-btn" data-tool="github-downloader">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!-- INFO -->
+ <section class="info-section container">
+    <h2>How to Use the GitHub Repository Downloader?</h2>
+    <ol>
+        <li>Enter the URL of the public GitHub repository you want to download.</li>
+        <li>Select the branch you wish to download (default is 'main').</li>
+        <li>Click the "Download Repository" button.</li>
+        <li>The repository will be downloaded as a ZIP file to your device.</li>
+    </ol>
+<br>
+    <h2>💡Features</h2>
+    <ul>
+        <li>Instantly download any public GitHub repository.</li>
+        <li>No login or authentication required.</li>
+        <li>Supports downloading from different branches.</li>
+    </ul>
+<br>
+    <h2>📋Note</h2>
+    <p>This tool only works with public repositories. Private repositories require authentication and cannot be downloaded using this tool.</p>
+ </section>
+
+<hr>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/github-downloader.js"></script>
+
+</body>
+</html>

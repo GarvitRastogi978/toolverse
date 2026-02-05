@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Online To-Do List App | Free Task Manager</title>
+  <meta name="description" content="Free online to-do list app. Organize your tasks, mark completed, filter tasks and save automatically." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>To-Do List App</h1>
+    <p class="tool-desc">Organize your daily tasks and stay productive.</p>
+
+    <div class="todo-app">
+      <div class="todo-input">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Add a new task..."
+        />
+        <button id="addTaskBtn" class="btn">Add</button>
+      </div>
+
+      <div class="todo-filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+
+      <div class="todo-footer">
+        <span id="taskCount">0 tasks</span>
+        <button id="clearCompleted" class="btn danger">
+          Clear Completed
+        </button>
+      </div>
+
+      <button class="fav-btn" data-tool="todo">
+        ⭐ Add to Favorites
+      </button>
+    </div>
+  </section>
+</main>
+
+<hr>
+
+<!-- INFO -->
+ <section class="info-section container">
+    <h2>How to Use the To-Do List App</h2>
+    <p>
+        This simple to-do list app allows you to manage your tasks efficiently. You can add new tasks, mark them as completed, and filter them based on their status. Your tasks are saved automatically in your browser's local storage, so they will be available even after you close the tab.
+    </p>
+<br>
+    <ul>
+        <li><strong>Add Tasks:</strong> Type a task in the input field and click "Add" or press Enter.</li>
+        <li><strong>Mark as Completed:</strong> Click the checkbox next to a task to mark it as completed.</li>
+        <li><strong>Filter Tasks:</strong> Use the filter buttons to view all tasks, only active tasks, or only completed tasks.</li>
+        <li><strong>Clear Completed:</strong> Click the "Clear Completed" button to remove all completed tasks from your list.</li>
+    </ul>
+ </section>
+
+<hr>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/todo.js"></script>
+
+</body>
+</html>

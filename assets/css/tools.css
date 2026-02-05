@@ -642,3 +642,185 @@ div {
 .hidden {
   display: none;
 }
+
+/* ----------------------------------------------------------------------------- */
+
+/* TO DO LIST STYLING */
+.todo-app {
+  max-width: 500px;
+  margin: auto;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.todo-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.todo-filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.todo-filters button {
+  flex: 1;
+  margin: 0 0.2rem;
+}
+
+.todo-filters .active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.todo-footer button {
+  flex: 1;
+  margin: 0 0.2rem;
+}
+
+.todo-footer .clear-completed {
+  background: #e63946;
+  color: #fff;
+}
+/* ----------------------------------------------------------------------------- */
+
+/* Notes Taking Tool Styling */
+.notepad {
+  display: flex;
+  height: 70vh;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.notes-sidebar {
+  width: 200px;
+  border-right: 1px solid var(--border);
+  padding: 0.6rem;
+  background: var(--bg-soft);
+}
+
+.notes-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.notes-sidebar li {
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.notes-sidebar li.active,
+.notes-sidebar li:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor input {
+  padding: 0.6rem;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.editor textarea {
+  flex: 1;
+  padding: 0.8rem;
+  resize: none;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .notepad {
+    flex-direction: column;
+  }
+
+  .notes-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+/* ----------------------------------------------------------------------------- */
+
+/* GITHUB REPO DOWNLOAD STYLING */
+.tool-box {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tool-box input,
+.tool-box select {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.status {
+  text-align: center;
+  font-size: 0.9rem;
+}

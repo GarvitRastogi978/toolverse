@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Online Notepad | Free Text Editor with Auto Save</title>
+  <meta name="description" content="Free online notepad to write, edit and save notes instantly. No login required. Notes are saved automatically." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">DevTools</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper notepad-wrapper">
+    <h1>Online Notepad</h1>
+    <p class="tool-desc">Write notes online. Auto-saved locally. Simple & fast.</p>
+<hr>
+    <div class="notepad">
+      <aside class="notes-sidebar">
+        <button id="newNote" class="btn">➕ New Note</button>
+        <ul id="notesList"></ul>
+      </aside>
+
+      <div class="editor">
+        <input
+          type="text"
+          id="noteTitle"
+          placeholder="Note title..."
+        />
+        <textarea
+          id="noteContent"
+          placeholder="Start typing here..."
+        ></textarea>
+
+        <div class="editor-footer">
+          <span id="counter">0 words • 0 characters</span>
+          <div class="editor-actions">
+            <button id="downloadNote" class="btn">⬇ Download</button>
+            <button id="deleteNote" class="btn danger">🗑 Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="fav-btn" data-tool="notepad">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<!-- INFO -->
+ <section class="info-section container">
+  <h2>About This Tool</h2>
+  <p>
+    The Online Notepad is a simple and intuitive text editor designed for quick note-taking. It features auto-saving, allowing you to write without worrying about losing your work. You can create multiple notes, edit them, and download them as text files. No login is required, making it perfect for jotting down ideas on the fly.
+  </p>
+<br>
+    <h2>How to Use</h2>
+    <ol>
+        <li>Click the "➕ New Note" button to create a new note.</li>
+        <li>Enter a title for your note in the input field.</li>
+        <li>Start typing your content in the textarea. Your work will be saved automatically.</li>
+        <li>Use the "⬇ Download" button to save your note as a text file.</li>
+        <li>To delete a note, select it from the sidebar and click the "🗑 Delete" button.</li>
+    </ol>
+<br>
+    <h2>Features</h2>
+    <ul>
+        <li><strong>Auto Save:</strong> Your notes are saved locally in your browser, ensuring you never lose your work.</li>
+        <li><strong>Multiple Notes:</strong> Create and manage multiple notes with ease.</li>
+        <li><strong>Downloadable:</strong> Export your notes as text files for offline access.</li>
+        <li><strong>No Login Required:</strong> Start taking notes immediately without any sign-up process.</li>
+    </ul>
+<br>
+    <h2>Use Cases</h2>
+    <ul>
+        <li><strong>Quick Note-Taking:</strong> Perfect for jotting down ideas, to-do lists, or reminders on the fly.</li>
+        <li><strong>Brainstorming:</strong> Use it as a digital scratchpad for brainstorming sessions.</li>
+        <li><strong>Writing Practice:</strong> A great tool for practicing writing or drafting content without distractions.</li>
+        <li><strong>Offline Access:</strong> Download your notes to access them even when you're not connected to the internet.</li>
+    </ul>
+<br>
+    <h2>Privacy & Security</h2>
+    <p>
+        The Online Notepad saves your notes locally in your browser's storage. This means that your notes are not sent to any server and are only accessible on the device you created them on. If you clear your browser's cache or switch devices, your notes will not be available. Always remember to download important notes if you want to keep them safe.
+    </p>
+ </section>
+
+<hr>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevTools</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/notepad.js"></script>
+
+</body>
+</html>
