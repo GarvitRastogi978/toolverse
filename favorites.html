@@ -27,6 +27,8 @@
     <nav class="nav-links">
       <a href="index.html">Tools</a>
       <a href="favorites.html">Favorites ⭐</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
       <button id="themeToggle">🌙</button>
     </nav>
   </div>
@@ -37,11 +39,48 @@
   <section id="favoritesGrid" class="tools-grid"></section>
 </main>
 
+<!-- FOOTER SECTION -->
 <footer class="footer">
-  <div class="container">
-    <p>© 2026 ToolVerse</p>
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
   </div>
 </footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/favorites.js"></script>
@@ -148,10 +187,25 @@
     link: "tools/notepad.html"
   },
     "github-downloader": {
-    name: "GitHub Repository Downloader",
-    desc: "Download any public GitHub repository as ZIP",
-    link: "tools/github-downloader.html"
-  }
+      name: "GitHub Repository Downloader",
+      desc: "Download any public GitHub repository as ZIP",
+      link: "tools/github-downloader.html"
+  },
+    "pomodoro-timer": {
+      name: "Pomodoro Timer Online",
+      desc: "Boost productivity using the Pomodoro Technique. Focus, take breaks, repeat.",
+      link: "tools/pomodoro-timer.html"
+  },
+  "alarm-clock": {
+    name: "Alarm Clock Online",
+    desc: "Set precise alarms with sound notifications to manage your daily schedule effectively.",
+    link: "tools/alarm-clock.html"
+  },
+  "stopwatch": {
+    name: "Stopwatch Online",
+    desc: "Track elapsed time with millisecond precision and record laps for your activities.",
+    link: "tools/stopwatch.html"
+  }  
   };
 
   const grid = document.getElementById("favoritesGrid");

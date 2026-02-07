@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <title>Color Converter (HEX, RGB, HSL) | ToolVerse</title>
-  <meta name="description" content="Convert colors between HEX, RGB, and HSL formats instantly with live preview." />
+  <title>Stopwatch Online| High-precision stopwatch with lap recording features.</title>
+  <meta name="description" content="Free online Stopwatch tool. Track elapsed time with millisecond precision and record laps for your activities with ToolVerse." />
 
   <link rel="stylesheet" href="../assets/css/global.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
@@ -14,6 +13,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
 <header class="navbar">
@@ -31,61 +31,54 @@
 
 <main class="container">
   <section class="tool-wrapper">
-    <h1>Color Converter</h1>
-    <p class="tool-desc">Convert colors between HEX, RGB, and HSL formats.</p>
+    <h1>Stopwatch Online</h1>
+    <p class="tool-desc">High-precision stopwatch with lap recording features.</p>
 
-    <div class="color-preview" id="preview"></div>
-
-    <div class="tool-box">
-      <div class="color-picker-wrapper">
-        <label for="colorPicker">Visual Picker</label>
-        <input type="color" id="colorPicker" value="#3498db" />
-      </div>
-      <label>HEX
-        <input type="text" id="hex" placeholder="#3498db" />
-      </label>
-
-      <label>RGB
-        <input type="text" id="rgb" placeholder="52, 152, 219" />
-      </label>
-
-      <label>HSL
-        <input type="text" id="hsl" placeholder="204, 70%, 53%" />
-      </label>
-
-      <!--RGB + HSL SLIDERS-->
-      <div class="sliders">
-        <h3>RGB Sliders</h3>
-        <label>R <input type="range" id="rRange" min="0" max="255"></label>
-        <label>G <input type="range" id="gRange" min="0" max="255"></label>
-        <label>B <input type="range" id="bRange" min="0" max="255"></label>
-
-        <h3>HSL Sliders</h3>
-        <label>H <input type="range" id="hRange" min="0" max="360"></label>
-        <label>S <input type="range" id="sRange" min="0" max="100"></label>
-        <label>L <input type="range" id="lRange" min="0" max="100"></label>
+    <div class="clock-display">
+        <h2 id="stopwatchDisplay">00:00:00.00</h2>
     </div>
 
-
-      <div class="copy-actions">
-        <button class="btn" id="copyHex">Copy HEX</button>
-        <button class="btn" id="copyRgb">Copy RGB</button>
-        <button class="btn" id="copyHsl">Copy HSL</button>
-      </div>
-      
-      <span id="status"></span>
+    <div class="button-group">
+        <button class="btn" id="startBtn">Start</button>
+        <button class="btn btn-secondary hidden" id="lapBtn">Lap</button>
+        <button class="btn btn-danger hidden" id="stopBtn">Stop</button>
+        <button class="btn btn-secondary" id="resetBtn">Reset</button>
     </div>
 
-    <div class="palette">
-      <h3>Generated Palette</h3>
-      <div id="paletteGrid"></div>
+    <div id="lapsContainer" class="age-result hidden">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h2 style="margin: 0;">Laps</h2>
+            <button class="btn btn-secondary" id="downloadLapsBtn" style="padding: 5px 10px; font-size: 0.8rem;">
+            <i class="fa-solid fa-download"></i> Download TXT
+            </button>
+        </div>
+        <ul id="lapsList" style="list-style: none; padding: 0;"></ul>
     </div>
-
-    <button class="fav-btn" data-tool="color-converter">⭐ Add to Favorites</button>
   </section>
 </main>
 
-<!-- FOOTER SECTION -->
+<hr>
+
+<section class="info-section container">
+  <h2>How to Use the Stopwatch Online?</h2>
+  <p>
+    1. View the current time displayed at the top of the tool.<br>
+    2. Choose your desired time using the time input field.<br>
+    3. Click "Set Alarm" to activate it. Keep this tab open for the alarm to sound.
+  </p>
+<br>
+  <h2>Features</h2>
+  <p>
+    Our Stopwatch tool provides a precise, real-time digital display. It is perfect for managing study sessions, cooking times, or daily reminders directly from your browser without needing a mobile device.
+  </p>
+<br>
+    <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/alarm-clock.html">Alarm Clock Online</a> - Set Online Alarms & Reminders</li>
+      <li><a href="../tools/timer.html">Countdown Timer</a> - Set a timer for specific durations.</li>
+    </ul>
+</section>
+
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-column">
@@ -97,15 +90,10 @@
       <h3>Quick Links</h3>
       <ul>
         <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
-
         <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
-
         <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-
         <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-
         <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
-
         <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
       </ul>
     </div>
@@ -135,7 +123,7 @@
 
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/favorites.js"></script>
-<script src="../tools-js/color-converter.js"></script>
+<script src="../tools-js/stopwatch.js"></script>
 
 </body>
 </html>

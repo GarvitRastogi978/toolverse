@@ -5,54 +5,37 @@ const root = document.documentElement;
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   root.setAttribute("data-theme", savedTheme);
-  themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  if (themeToggle) themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 }
 
-// Toggle theme
-themeToggle.addEventListener("click", () => {
-  const currentTheme = root.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
+// Toggle theme - Wrapped in a check
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = root.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-  root.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
-});
+    root.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+  });
+}
 
-// const searchInput = document.getElementById("toolSearch");
-
-// if (searchInput) {
-//   searchInput.addEventListener("input", () => {
-//     const query = searchInput.value.toLowerCase();
-//     const cards = document.querySelectorAll(".tool-card");
-
-//     cards.forEach(card => {
-//       const title = card.querySelector("h3").textContent.toLowerCase();
-//       const desc = card.querySelector("p").textContent.toLowerCase();
-
-//       if (title.includes(query) || desc.includes(query)) {
-//         card.style.display = "flex";
-//       } else {
-//         card.style.display = "none";
-//       }
-//     });
-//   });
-// }
-
-
-//Filter + Search Logic (Unified)
+// Filter + Search Logic (Unified)
 let activeCategory = "all";
 const searchInput = document.getElementById("toolSearch");
-
 const filterButtons = document.querySelectorAll(".tool-filters button");
 
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    filterButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    activeCategory = btn.dataset.filter;
-    applyFilters();
+// Only run filter logic if buttons exist
+if (filterButtons.length > 0) {
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeCategory = btn.dataset.filter;
+      applyFilters();
+    });
   });
-});
+}
 
 if (searchInput) {
   searchInput.addEventListener("input", applyFilters);
@@ -60,23 +43,59 @@ if (searchInput) {
 
 function applyFilters() {
   const query = searchInput ? searchInput.value.toLowerCase() : "";
+  const cards = document.querySelectorAll(".tool-card");
 
-  document.querySelectorAll(".tool-card").forEach(card => {
-    const title = card.querySelector("h3").textContent.toLowerCase();
-    const desc = card.querySelector("p").textContent.toLowerCase();
-    const tags = card.dataset.tags.toLowerCase();
-    const category = card.dataset.category;
+  if (cards.length > 0) {
+    cards.forEach(card => {
+      const title = card.querySelector("h3").textContent.toLowerCase();
+      const desc = card.querySelector("p").textContent.toLowerCase();
+      const tags = card.dataset.tags ? card.dataset.tags.toLowerCase() : "";
+      const category = card.dataset.category;
 
-    const matchesSearch =
-      title.includes(query) ||
-      desc.includes(query) ||
-      tags.includes(query);
+      const matchesSearch = title.includes(query) || desc.includes(query) || tags.includes(query);
+      const matchesCategory = activeCategory === "all" || category === activeCategory;
 
-    const matchesCategory =
-      activeCategory === "all" || category === activeCategory;
-
-    card.style.display =
-      matchesSearch && matchesCategory ? "flex" : "none";
-  });
+      card.style.display = matchesSearch && matchesCategory ? "flex" : "none";
+    });
+  }
 }
 
+// BACK TO TOP BUTTON
+const backToTopBtn = document.getElementById("backToTop");
+
+if (backToTopBtn) {
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+}
+
+// COOKIE CONSENT
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieBanner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("acceptCookies");
+
+  // Only run if both elements exist
+  if (cookieBanner && acceptBtn) {
+    if (!localStorage.getItem("cookieAccepted")) {
+      setTimeout(() => {
+        cookieBanner.classList.add("show");
+      }, 2000);
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      cookieBanner.classList.remove("show");
+      localStorage.setItem("cookieAccepted", "true");
+    });
+  }
+});

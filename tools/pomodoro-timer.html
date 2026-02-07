@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer - Free Online Focus Timer</title>
+  <meta name="description" content="Free online Pomodoro Timer with focus, short break and long break modes. Boost productivity with automatic alerts." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+  <div class="tool-container">
+
+    <h1>Pomodoro Timer Online</h1>
+    <p class="tool-desc">
+      Boost productivity using the Pomodoro Technique. <br> Focus, take breaks, repeat.
+    </p>
+
+    <!-- Mode Buttons -->
+    <div class="mode-buttons">
+      <button class="mode-btn active" data-mode="focus">🎯 Focus</button>
+      <button class="mode-btn" data-mode="short">🧋 Short Break</button>
+      <button class="mode-btn" data-mode="long">🛋️ Long Break</button>
+    </div>
+
+    <!-- Timer Display -->
+    <div class="timer-display" id="timer">25:00</div>
+
+    <!-- Controls -->
+    <div class="timer-controls">
+      <button id="startBtn" class="primary-btn">Start</button>
+      <button id="resetBtn" class="secondary-btn">Reset</button>
+    </div>
+
+    <!-- SUBTITLE -->
+    <p><i>🔔 Bell sound will ring when the timer is over. Works even when tab is inactive!</i></p>
+
+
+    <!-- Audio -->
+    <audio id="bellSound" preload="auto">
+      <source src="../assets/sound/bell.mp3" type="audio/mp3" />
+    </audio>
+  </div>
+
+<hr>
+
+<!-- INFO -->
+<section class="info-section container">
+    <h2>🤔❓What is Pomodoro Timer?</h2>
+    <p>A Pomodoro Timer is a productivity tool based on the <strong>Pomodoro Technique</strong>, a time management method developed by <strong>Francesco Cirillo in the late 1980s</strong>.
+            It is designed to help you maintain <strong>laser-like focus</strong> by breaking your workday into <strong>manageable chunks</strong>, preventing the "marathon" burnout that often happens when you try to work for hours on end.</p>
+<br>
+    <h2>🥫Why is it called "Pomodoro"?</h2>
+    <p>The name comes from the Italian word for <strong>tomato</strong>. As a university student, <strong>Cirillo</strong> used a tomato-shaped kitchen timer to track his work sessions. He found that committing to just 10 minutes of "undistracted" time helped him overcome procrastination. Eventually, he settled on the 25-minute rhythm used today.</p>
+<br>
+    <h2>⚙️How the Cycle Works</h2>
+    <p>The standard "Pomodoro" cycle consists of four main phases:</p>
+    <ul>
+        <li><strong>The Pomodoro (25 min):</strong> Work on a single task with zero distractions. No emails, no phone, no "quick" checks of social media.</li>
+        <li><strong>Short Break (5 min):</strong> When the timer rings, you must stop. Step away from your desk, stretch, or grab water.</li>
+        <li><strong>The Repeat:</strong> After your break, start another 25-minute Pomodoro.</li>
+        <li><strong>The Long Break (15–30 min):</strong> After completing four Pomodoros, take a much longer break to fully recharge your brain.</li>
+    </ul>
+<br>
+    <h2>How it Works❓</h2>
+    <ul>
+        <li>Pick a single task to focus on.</li>
+        <li>Set the timer to 25 minutes.</li>
+        <li>Work until the timer rings. Avoid all distractions.</li>
+        <li>Take a short break (5 minutes).</li>
+        <li>Every 4 Pomodoros, take a longer break (15–30 minutes).</li>
+    </ul>
+<br>
+<hr>
+    <h1><span class="icon-question">❓</span>Frequently Asked Questions</h1>
+<br>
+    <table>
+        <thead>
+            <tr>
+                <th><u>Question</u></th>
+                <th><u>Answer</u></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="question-cell">Why 25 minutes?</td>
+                <td class="answer-cell">It's long enough to get meaningful work done but short enough to maintain intense focus without burnout.</td>
+            </tr>
+            <tr>
+                <td class="question-cell">What do I do during the breaks?</td>
+                <td class="answer-cell">Step away from your screen! Stretch, grab water, or meditate. The goal is to give your brain a total rest.</td>
+            </tr>
+            <tr>
+                <td class="question-cell">Can I change the timer lengths?</td>
+                <td class="answer-cell">Absolutely. While 25/5 is the classic rhythm, many people prefer "Flowtime" (50/10) if they are doing deep creative work.</td>
+            </tr>
+            <tr>
+                <td class="question-cell">What if I get interrupted?</td>
+                <td class="answer-cell">If a distraction is unavoidable, end the Pomodoro there and start over later. The goal is "unbroken" focus.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<hr>
+<!-- FOOTER SECTION -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/pomodoro-timer.js"></script>
+</body>
+</html>

@@ -824,3 +824,126 @@ div {
   text-align: center;
   font-size: 0.9rem;
 }
+
+/* ----------------------------------------------------------------------------- */
+
+/* POMODORO STYLING */
+.tool-container {
+  max-width: 520px;
+  margin: auto;
+  text-align: center;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.mode-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mode-btn.active {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.mode-btn.active:hover {
+  background: #4338ca;
+}
+
+.timer-display {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 25px 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #4f46e5;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size:large;
+}
+
+.primary-btn:hover {
+  background: #4338ca;
+}
+
+.secondary-btn {
+  background: #f36161;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+}
+
+.secondary-btn:hover {
+  background: #e54e4e;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ALARM CLOCK STYLING */
+/* Alarm Clock Specific Styles */
+.clock-display {
+  background: var(--card-bg, #f4f4f4);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 2px solid var(--primary-color, #007bff);
+}
+
+#currentTime {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  margin: 0;
+  color: var(--text-color, #333);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Pulse animation for when alarm goes off */
+.alarm-ringing {
+  animation: pulse-red 1s infinite;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}

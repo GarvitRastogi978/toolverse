@@ -94,7 +94,17 @@ body {
   border: none;
   cursor: pointer;
   color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
+
+.nav-links a:hover,
+.nav-links button:hover {
+  color: #4f46e5; /* Changes color to a nice blue on hover */
+  opacity: 0.8;    /* Slightly fades the text */
+  text-shadow: 0 0 8px #4f46e5;
+}
+
 
 /* HERO */
 .hero {
@@ -108,3 +118,7 @@ body {
   margin-top: 4rem;
   text-align: center;
 }
+
+/* .................................................................. */
+
+/* ABOUT PAGE STYLING */
