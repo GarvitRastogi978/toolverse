@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Countdown Timer| Set your time and start the countdown</title>
+  <meta name="description" content="Free online Stopwatch tool. Track elapsed time with millisecond precision and record laps for your activities with ToolVerse." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>⏰ Countdown Timer</h1>
+    <p class="tool-desc">⏱️ Set your time and start the countdown...</p>
+
+    <div class="clock-display">
+        <h2 id="timerDisplay">00:00:00</h2>
+    </div>
+
+    <div class="timer-inputs">
+        <div class="form-group">
+            <label>Hrs</label>
+            <input type="number" id="hrsInput" min="0" max="99" value="0" style="width: 60px;">
+        </div>
+        <div class="form-group">
+            <label>Min</label>
+            <input type="number" id="minInput" min="0" max="59" value="0" style="width: 60px;">
+        </div>
+        <div class="form-group">
+            <label>Sec</label>
+            <input type="number" id="secInput" min="0" max="59" value="0" style="width: 60px;">
+        </div>
+    </div>
+
+    <!-- QUICK PRESETS -->
+    <div class="presets-group">
+        <button class="btn btn-secondary preset-btn" data-minutes="5">5m</button>
+        <button class="btn btn-secondary preset-btn" data-minutes="10" >10m</button>
+        <button class="btn btn-secondary preset-btn" data-minutes="15">15m</button>
+        <button class="btn btn-secondary preset-btn" data-minutes="25" >25m (Pomodoro)</button>
+        <button class="btn btn-secondary preset-btn" data-minutes="60" >1h</button>
+    </div>
+
+    <div class="button-group">
+        <button class="btn" id="startTimerBtn">► Start</button>
+        <button class="btn btn-danger hidden" id="pauseTimerBtn">❚❚ Pause</button>
+        <button class="btn btn-secondary" id="resetTimerBtn">↻ Reset</button>
+    </div>
+
+    <div id="timerStatus" class="age-result hidden">
+      <h2 id="statusTitle">⏰Timer Active</h2>
+      <p id="statusMsg">🎯 Focus on your task!</p>
+    </div>
+
+    <button class="fav-btn" data-tool="countdown-timer">
+      ⭐ Add to Favorites
+    </button>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section container">
+  <h2>How to Use the Countdown Timer?</h2>
+  <p>
+    1. <strong>Set the Time:</strong> Use the input fields or a slider to select the days, hours, minutes, and seconds you want to count down from.<br>
+    2. <strong>Start the Timer:</strong> Click the Start or Play button. The numbers will begin to decrease in real-time.<br>
+    3. <strong>Manage the Countdown:</strong>   <ul>
+                                                    <li>Pause: Temporarily stop the clock.</li>
+                                                    <li>Reset: Return the timer to your original starting point.</li>
+                                                    <li>Alert: Most timers will trigger a sound (alarm) or a pop-up message once the clock reaches zero.</li>
+                                                </ul>
+  </p>
+<br>
+    <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/alarm-clock.html">Alarm Clock Online</a> - Set Online Alarms & Reminders</li>
+      <li><a href="../tools/stopwatch.html">Stopwatch Online</a> - High-precision stopwatch with lap recording features.</li>
+    </ul>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/countdown-timer.js"></script>
+
+</body>
+</html>

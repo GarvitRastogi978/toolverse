@@ -947,3 +947,63 @@ div {
   70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
   100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
 }
+
+/* ..................................................................... */
+/* COUNTDOWN TIMER STYLING */
+.clock-display {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:larger;
+}
+
+.timer-inputs {
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  margin-bottom: 20px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+/* Container for the preset buttons */
+.presets-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Ensures buttons stack on small mobile screens */
+}
+
+/* Individual Preset Button Styling */
+.preset-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color, #007bff);
+    color: var(--primary-color, #007bff);
+    padding: 6px 14px;
+    border-radius: 20px; /* Rounded pill shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover and Active States */
+.preset-btn:hover {
+    background-color: var(--primary-color, #007bff);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preset-btn:active {
+    transform: translateY(0);
+}
+
+/* Dark Theme Adjustments (if applicable) */
+[data-theme="dark"] .preset-btn {
+    border-color: #555;
+    color: #bbb;
+}
+
+[data-theme="dark"] .preset-btn:hover {
+    border-color: var(--primary-color);
+    color: #fff;
+}
