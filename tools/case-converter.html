@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case Converter| Type or paste your text below 👇 to transform its case.</title>
+  <meta name="description" content="Free online Stopwatch tool. Track elapsed time with millisecond precision and record laps for your activities with ToolVerse." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>🔁 Case Converter</h1>
+    <p class="tool-desc">📋 Type or paste your text below 👇 to transform its case.</p>
+
+    <div class="input-group">
+      <textarea id="textInput" placeholder="Enter your text here..." rows="10" style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); font-family: inherit; resize: vertical;"></textarea>
+    </div>
+
+    <div class="stats-bar" style="margin: 10px 0; font-size: 0.9rem; color: var(--text-secondary);">
+      Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span>
+    </div>
+
+    <div class="button-group" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 20px;">
+      <button class="btn btn-secondary" id="upperBtn">UPPERCASE</button>
+      <button class="btn btn-secondary" id="lowerBtn">lowercase</button>
+      <button class="btn btn-secondary" id="sentenceBtn">Sentence case</button>
+      <button class="btn btn-secondary" id="titleBtn">Title Case</button>
+      <button class="btn btn-secondary" id="capitalizeBtn">Capitalize Words</button>
+      <button class="btn btn-danger" id="clearTextBtn">Clear</button>
+      <button class="btn" id="copyTextBtn" style="grid-column: span 1;"><i class="fa-solid fa-copy"></i> Copy</button>
+    </div>
+
+    <div id="copyFeedback" class="hidden" style="color: #4caf50; margin-top: 10px; font-weight: bold;">Text copied to clipboard!</div>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section container">
+  <h2>How to Use Case Converter?</h2>
+  <ol>
+    <li><strong>Input Your Text:</strong> Click inside the large dark box labeled "Enter your text here..." and type or paste the text you want to modify. You’ll notice the "Words" and "Characters" counters update automatically at the bottom.</li>
+<br>
+    <li><strong>Choose Your Transformation:</strong>
+        <ul>
+            <li><strong>UPPERCASE:</strong> CONVERTS EVERYTHING TO CAPITAL LETTERS.</li>
+            <li><strong>lowercase:</strong> converts everything to small letters.</li>
+            <li><strong>Sentence case:</strong> Capitalizes only the first letter of each sentence (e.g., "The quick brown fox.")</li>
+            <li><strong>Title Case:</strong> Capitalizes the first letter of every major word (e.g., "The Quick Brown Fox").</li>
+            <li><strong>Capitalize Words:</strong> Capitalizes the first letter of every single word, regardless of grammar.</li>
+        </ul>
+<br>
+    <li><strong>Copy or Reset:</strong>
+    <ul>
+        <li><strong>Copy:</strong> Once you're happy with the result, click the red Copy button to save the text to your clipboard.</li>
+        <li><strong>Clear:</strong> Click the red Clear button to wipe the box clean and start over with new text.</li>
+    </ul>
+    </li>
+    </li>
+  </ol>
+<br>
+    <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/unit-converter.html">Unit Converter</a> - Convert length, weight, and temperature.</li>
+      <li><a href="../tools/color-converter.html">Color Converter</a> - Convert colors between HEX, RGB, and HSL.</li>
+    </ul>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/case-converter.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Text/Code Diff Checker | Compare original text (left) with modified text (right).</title>
+  <meta name="description" content="Compare original text (left) with modified text (right) using text and code difference checker with ToolVerse." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="max-width: 1200px;">
+  <section class="tool-wrapper">
+    <h1>🆚Text/Code Diff Checker</h1>
+    <p class="tool-desc">Compare original text (left) with modified text (right).👉</p>
+
+    <div class="diff-inputs" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+      <textarea id="textOld" placeholder="Paste original text here..." rows="12"></textarea>
+      <textarea id="textNew" placeholder="Paste modified text here..." rows="12"></textarea>
+    </div>
+
+    <button class="btn" id="compareBtn" style="width: 100%; margin-bottom: 30px;">⇄ Compare ⇄</button>
+
+    <div id="diffOutputContainer" class="hidden">
+      <div style="display: flex; gap: 20px; margin-bottom: 10px; font-weight: bold;">
+        <span style="color: #d32f2f;">- Deletions</span>
+        <span style="color: #388e3c;">+ Additions</span>
+      </div>
+      <div id="diffResult" class="diff-viewer" style="background: #1e1e1e; color: #d4d4d4; padding: 20px; border-radius: 8px; font-family: monospace; overflow-x: auto; white-space: pre;"></div>
+    </div>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section container">
+  <h2>How to Use?</h2>
+  <ul>
+    <li><strong>STEP1:</strong> Paste the original text/code on the left side view.</li>
+    <li><strong>STEP2:</strong> Paste the modified text.code on the right side view.</li>
+    <li><strong>STEP3:</strong> Click on <b>"Compare"</b> button.</li>
+    <li><strong>STEP4:</strong> Check and find out what to add, delete and insert from below output section (After Step 3).</li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/diff-checker.js"></script>
+
+</body>
+</html>
