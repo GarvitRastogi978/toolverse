@@ -1022,3 +1022,26 @@ div {
   .line-num { 
     color: #555; display: inline-block; width: 30px; user-select: none; 
   }
+
+/* .......................................................................... */
+/* JSON-to-CSV / CSV-to-JSON Converter PREVIEW */
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.preview-table th {
+    background: var(--bg-tertiary, #333);
+    color:#fefe00;
+    padding: 10px;
+    border: 1px solid #444;
+}
+.preview-table td {
+    padding: 8px;
+    border: 1px solid #444;
+    color: var(--text-secondary);
+}
+.preview-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JSON-to-CSV / CSV-to-JSON Converter</title>
+  <meta name="description" content="Seamlessly transform nested JSON to CSV or CSV to structured JSON with live table previews." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-wrapper">
+    <h1>JSON-to-CSV / CSV-to-JSON Converter</h1>
+    <p>Seamlessly transform nested JSON to CSV or CSV to structured JSON with live table previews.</p>
+    
+    <div class="converter-controls" style="margin-bottom: 20px;">
+        <button class="btn" id="jsonToCsvBtn">JSON to CSV ↓</button>
+        <button class="btn btn-secondary" id="csvToJsonBtn">CSV to JSON ↑</button>
+    </div>
+
+    <div class="input-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <textarea id="dataInput" placeholder="Paste JSON or CSV here..." rows="12"></textarea>
+      <textarea id="dataOutput" placeholder="Resulting format will appear here..." rows="12" readonly></textarea>
+    </div>
+
+    <div id="previewSection" class="hidden" style="margin-top: 30px;">
+        <h3>Live Table Preview</h3>
+        <div id="tableContainer" style="overflow-x: auto; background: var(--bg-secondary); border-radius: 8px;">
+            </div>
+    </div>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section container">
+  <h2>How to Use?</h2>
+  <ul>
+    <li><strong>STEP1:</strong> Paste the original text/code on the left side view.</li>
+    <li><strong>STEP2:</strong> Paste the modified text.code on the right side view.</li>
+    <li><strong>STEP3:</strong> Click on <b>"Compare"</b> button.</li>
+    <li><strong>STEP4:</strong> Check and find out what to add, delete and insert from below output section (After Step 3).</li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/data-converter.js"></script>
+
+</body>
+</html>
