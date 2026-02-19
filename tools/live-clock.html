@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Live World Clock</title>
+  <meta name="description" content="Free online Live World Clock tool." />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container clock-page-wrapper">
+  <div class="glass-bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <section class="tool-wrapper clock-glass-theme">
+    <div class="clock-header">
+        <h1>Live World Clock</h1>
+        <div class="timezone-picker">
+            <select id="timezoneSelect" class="glass-select">
+                <option value="local">📍 Local Time (Auto)</option>
+                <option value="UTC">🌐 UTC (Universal Time)</option>
+                <option value="America/New_York">🗽 New York</option>
+                <option value="Europe/London">🇬🇧 London</option>
+                <option value="Asia/Tokyo">🗼 Tokyo</option>
+                <option value="Asia/Kolkata">🇮🇳 India (IST)</option>
+                <option value="Australia/Sydney">🇦🇺 Sydney</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="clock-display-area">
+        <div class="analog-clock">
+            <div class="clock-face">
+                <div class="marking m1"></div><div class="marking m2"></div>
+                <div class="marking m3"></div><div class="marking m4"></div>
+                <div class="marking m5"></div><div class="marking m6"></div>
+                <div class="marking m7"></div><div class="marking m8"></div>
+                <div class="marking m9"></div><div class="marking m10"></div>
+                <div class="marking m11"></div><div class="marking m12"></div>
+            </div>
+            
+            <div class="hand-wrapper" id="hr-wrapper"><div class="hand hour"></div></div>
+            <div class="hand-wrapper" id="mn-wrapper"><div class="hand minute"></div></div>
+            <div class="hand-wrapper" id="sc-wrapper"><div class="hand second"></div></div>
+            
+            <div class="center-dot"></div>
+        </div>
+
+        <div class="digital-display">
+            <h2 id="digitalTime">00:00:00</h2>
+            <p id="fullDate"></p>
+        </div>
+    </div>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section container">
+  <h2>Features</h2>
+  <p>
+    Our Clock tool provides a precise, real-time digital display. It is perfect for managing study sessions, cooking times, or daily reminders directly from your browser without needing a mobile device.
+  </p>
+<br>
+    <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/stopwatch.html">Stopwatch</a> - Track laps and elapsed time.</li>
+      <li><a href="../tools/countdown-timer.html">Countdown Timer</a> - Set a timer for specific durations.</li>
+    </ul>
+</section>
+
+<hr>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/favorites.js"></script>
+<script src="../tools-js/live-clock.js"></script>
+
+</body>
+</html>

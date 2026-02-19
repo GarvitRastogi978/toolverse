@@ -20,6 +20,24 @@ if (themeToggle) {
   });
 }
 
+// --- NEW: HAMBURGER MENU TOGGLE ---
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    // Optional: Add a class to the hamburger itself for "X" animation
+    hamburger.classList.toggle("open");
+  });
+
+  // Close menu when a link is clicked (useful for one-page sites)
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => navLinks.classList.remove("active"));
+  });
+}
+// ----------------------------------
+
 // Filter + Search Logic (Unified)
 let activeCategory = "all";
 const searchInput = document.getElementById("toolSearch");

@@ -1045,3 +1045,169 @@ div {
 .preview-table tr:nth-child(even) {
     background: rgba(255, 255, 255, 0.03);
 }
+
+/* .................................................................... */
+/* LIVE CLOCK STYLE */
+.timezone-picker {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.glass-select {
+    /* Base Styling */
+    appearance: none; /* Removes default browser arrow */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Typography */
+    color: #e9550b;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    
+    /* Borders & Spacing */
+    padding: 12px 40px 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    
+    /* Modern Transitions */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Custom SVG Arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 14px;
+}
+
+/* Hover & Focus Effects */
+.glass-select:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.glass-select:focus {
+    border-color: #ff3b3b; /* Matches the second hand color */
+    box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.2);
+}
+
+/* Styling the dropdown options */
+.glass-select option {
+    background-color: #1a1a1a; /* Dark background for readability */
+    color: white;
+    padding: 10px;
+}
+
+/* Optional: Subtle animation for the container */
+.timezone-picker::after {
+    content: 'SELECT TIMEZONE';
+    position: absolute;
+    top: -18px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.analog-clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 10px solid #222;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8), inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+.hand-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0.1, 2.7, 0.58, 1); /* Makes the tick "bounce" */
+}
+
+.hand {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hour { width: 8px; height: 25%; background: #fff; margin-top: 25%; }
+.minute { width: 5px; height: 35%; background: #aaa; margin-top: 15%; }
+.second { width: 2px; height: 40%; background: #ff0015; margin-top: 10%; }
+
+.center-dot {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px; height: 15px;
+    background: #ff0015;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.digital-display {
+    margin-top: 25px;
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    /* Subtle inner shadow to make it look "recessed" into the glass */
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#digitalTime {
+    font-family: 'Courier New', Courier, monospace; /* Monospaced keeps characters aligned */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #eb6708;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 2px;
+    /* Soft glow effect */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+#fullDate {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8; /* Muted blue-grey */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Optional: Add a "Live" pulse dot next to the digital time */
+#digitalTime::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #4ade80; /* Refreshing green */
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 10px #4ade80;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
