@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Image Cropper - ToolVerse</title>
+  <meta name="description" content="Free online Image Cropper tool with custom aspect ratios." />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/tools.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="../index.html" class="logo">ToolVerse</a>
+    <nav class="nav-links">
+      <a href="../index.html">Tools</a>
+      <a href="../favorites.html">Favorites ⭐</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container clock-page-wrapper">
+  <div class="glass-bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <section class="tool-wrapper clock-glass-theme">
+    <div class="clock-header">
+    <h1>Image Cropper</h1>
+    <p>Upload, adjust, and crop your images with precision.</p>
+</div>
+
+<div class="tool-content-area">
+    <div id="ratioToolbar" class="custom-toolbar" style="display: none;">
+        <button class="ratio-btn active" data-ratio="NaN">Free <i class="fa-solid fa-chevron-down"></i></button>
+        <button class="ratio-btn" data-ratio="1">1:1 <i class="fa-solid fa-chevron-down"></i></button>
+        <button class="ratio-btn" data-ratio="0.75">3:4 <i class="fa-solid fa-chevron-down"></i></button>
+        <button class="ratio-btn" data-ratio="0.8">4:5 <i class="fa-solid fa-chevron-down"></i></button>
+        <button class="ratio-btn" data-ratio="0.315">6:19 <i class="fa-solid fa-chevron-down"></i></button>
+        <button class="ratio-btn" data-ratio="0.5625">9:16 <i class="fa-solid fa-chevron-down"></i></button>
+        <button class="ratio-btn" data-ratio="0.666">2:3 <i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+
+    <div id="uploadBox" class="upload-container">
+        <div class="upload-trigger">
+            <span class="upload-text">Click or Drag Image to Upload</span>
+            <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+        </div>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    </div>
+
+    <div id="editorWorkspace" style="display: none;">
+        <div class="cropper-wrapper">
+            <img id="imageToCrop" src="">
+        </div>
+
+        <div class="action-footer">
+            <button id="cropBtn" class="btn-main btn-download">
+                <i class="fa-solid fa-crop-simple"></i> Download Cropped Image
+            </button>
+            <button id="resetBtn" class="btn-main btn-reset">
+                <i class="fa-solid fa-rotate-left"></i> Reset <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</div>
+  </section>
+</main>
+
+<hr>
+
+<section class="info-section container">
+  <h2>Features</h2>
+  <p>
+    Our Image Crop tool allows you to resize and frame your photos perfectly for social media or professional use. Supporting common ratios like 9:16 for stories and 1:1 for profile pictures.
+  </p>
+<br>
+    <!-- <h2>Other Useful Tools</h2>
+    <ul>
+      <li><a href="../tools/live-clock.html">Live World Clock</a> - Check time globally.</li>
+      <li><a href="../tools/stopwatch.html">Stopwatch</a> - Track precision timing.</li>
+    </ul> -->
+</section>
+
+<hr>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3 class="footer-logo">ToolVerse</h3>
+      <p>One Universe. Infinite Tools. Providing fast, secure, and free tools for everyone, everywhere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house"></i> All Tools</a></li>
+        <li><a href="../favorites.html"><i class="fa-solid fa-star"></i> My Favorites</a></li>
+        <li><a href="../about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="../privacy.html"><i class="fa-solid fa-user-shield"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p><i class="fa-solid fa-paper-plane"></i> support@toolverse.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 ToolVerse. Made By: Garvit Rastogi</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+<script src="../tools-js/image-cropper.js"></script>
+
+</body>
+</html>

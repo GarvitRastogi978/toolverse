@@ -1211,3 +1211,130 @@ div {
     50% { opacity: 0.3; }
     100% { opacity: 1; }
 }
+
+/* ................................................ */
+/* IMAGE CROP TOOL STYLING */
+/* Container Fixes */
+.tool-content-area {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cropper-wrapper {
+    width: 100%;
+    height: 450px; /* Fixed height to prevent UI jumping */
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+
+/* Ratio Buttons (White cards with Orange text) */
+.custom-toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.ratio-btn {
+    background: #fff;
+    color: #e67e22; /* Specific Orange */
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+/* Action Buttons (Matches bottom of your screenshot) */
+.action-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-main {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-download {
+    background: #c9e9d1; /* Light Green */
+    color: #5d8a66;
+}
+
+.btn-reset {
+    background: #fff;
+    color: #e67e22;
+}
+
+/* Upload zone styling */
+.upload-container {
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-text {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.upload-icon {
+    color: #e67e22;
+    margin-left: 10px;
+}
+
+/* .......................................................... */
+/* TEXT TO SPEECH STYLE */
+/* Placeholder and Text Visibility Fix */
+/* LIGHT MODE (Default) */
+.tts-textarea {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.6); /* Slightly more opaque glass */
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    color: #333 !important; /* Dark text for light mode */
+}
+
+.tts-textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* DARK MODE FIX */
+/* This assumes your body or a wrapper gets the class 'dark-theme' */
+body.dark-theme .tts-textarea {
+    color: #ffffff !important; /* Pure white text */
+    background: rgba(255, 255, 255, 0.05); /* Darker glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .tts-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important; /* Light placeholder */
+}
